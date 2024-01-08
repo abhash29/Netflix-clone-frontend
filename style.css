@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    background-image: url('assets/images/bg.jpg');
+    height: 70vh;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(100vw, 1200px);
+}
+
+/* Black Cover --> To make the background-image dark */
+.cover {
+    background-color: black;
+    width: 100%;
+    height: 70vh;
+    opacity: 0.64;
+    position: absolute;
+    top: 0;
+}
+
+/* Navbar */
+nav {
+    max-width: 60vw;
+    margin: auto;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999999;
+    /* border: 1px solid white; */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 50px;
+    z-index: 9999;
+    height: calc(100%-100px);
+    color: white;
+    gap: 25px;
+}
+
+.hero> :nth-child(1) {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.hero> :nth-child(2) {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.hero> :nth-child(3) {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Buttons */
+nav button {
+    position: relative;
+    z-index: 9999;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn {
+    padding: 3px 8px;
+    font-weight: 400;
+    background-color: rgba(248, 243, 0, 0.021);
+    color: white;
+    border: 1px solid rgba(248, 243, 243, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.main input {
+    padding: 7px 101px 8px 14px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+/* Seperation */
+.separation {
+    height: 5px;
+    background-color: rgb(46, 44, 44, 1.5);
+    position: relative;
+    z-index: 99999;
+}
+
+/* First Section */
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    height: 470px;
+    margin: auto;
+    color: white;
+}
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    position: relative;
+    margin-top: 10px;
+    width: 555px;
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 545px;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first>div :nth-child(1) {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+section.first>div :nth-child(2) {
+    font-size: 20px;
+}
+
+/* FAQ Section */
+.faq{
+    color: white;
+    background-color: black;
+    padding: 30px;
+}
+.faq h2{
+    text-align: center;
+    font-size: 40px;
+}
+.faqbox{
+    background-color: #2d2d2d;
+    max-width: 60vw;
+    margin: 30px auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 1s ease-out;
+}
+/* 
+
+
+/* Footer */
+footer{
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 14px;
+}
+footer .questions{
+    padding: 34px 0;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    gap: 25px;
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.footer a{
+    color: white;
+    font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        gap: 20px;
+    }
+
+    .hero> :nth-child(1) {
+        text-align: center;
+        /* padding: 0 80px; */
+    }
+    section.first>div :nth-child(1){
+        font-size: 35px;
+    }
+    section.first>div :nth-child(2){
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .hero {
+        gap: 15px;
+    }
+
+    .hero> :nth-child(1) {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .hero> :nth-child(2) {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .hero> :nth-child(3) {
+        text-align: center;
+        flex-wrap: nowrap;
+        padding: 0 20px;
+    }
+    .first{
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    .secImg img{
+        width: 450px;
+    }
+    .secImg video{
+        width: 435px;
+    }
+    .second, .fourth{
+        /* display: flex; */
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .first, .third{
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .main nav img {
+        width: 100px;
+    }
+
+    .hero> :nth-child(1) {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .hero> :nth-child(2) {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .hero> :nth-child(3) {
+        text-align: center;
+        /* padding: 0 80px; */
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main input {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+    }
+
+    .btn-red {
+        font-size: 12px;
+    }
+    .faq h2{
+        font-size: 30px;
+    }
+}
